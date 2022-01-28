@@ -1,0 +1,44 @@
+.search-a{
+    font-size: 28px;
+    margin: 10px;
+    text-decoration: none;
+}
+.search-title{
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+}
+.searchdata{
+    background: url("images/bg.jpg") no-repeat center center fixed;
+    background-size: cover;
+    -o-background-size: cover;  
+    -webkit-background-size: cover;
+    -moz-background-size:cover;
+}
+.search-a:hover{
+    text-shadow: 2px 2px 8px #FF0000;
+}
+.search-btn,.file{
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 550px;
+    margin-top: 150px;
+    border-radius: 5px;
+    width: 200px;
+    padding-bottom: 10px;
+}
+button{
+    text-align: center;
+    margin-top: 150px;
+    border-radius: 5px;
+}
+.searching{
+        background: url("images/searching.jpg") no-repeat center center fixed;
+        background-size: cover;
+        -o-background-size: cover;  
+        -webkit-background-size: cover;
+        -moz-background-size:cover;
+    }
+::placeholder{
+    color: black;
+}

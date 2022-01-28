@@ -1,0 +1,41 @@
+{% include 'base.html'%}
+{% load static %}
+{% block content %}
+<html>
+    <head>
+        <title>Modifypage</title>
+        <link rel="stylesheet" href="{% static 'css/modify_search_page.css' %}">
+    </head>
+    <body>
+        <form method="post" action="">
+            <div class="main">
+                {% csrf_token %}
+                <label>Academic Year</label>
+                <select name="year" required>
+                    <option value="2018-2022" >2018-2022</option>
+                    <option value="2019-2023" >2019-2023</option>
+                    <option value="2020-2024" >2020-2024</option>
+                    <option value="2021-2025" >2021-2025</option>
+                </select><br><br>
+                <label>Project Type</label>
+                <select name="protype" required>
+                    <option value="Mini Project">Mini Project</option>
+                    <option value="Major Project">Major Project</option>
+                </select><br><br>
+                <label>Department</label>
+                <select name="dept" required>
+                    <option value="AERO">AERO</option>
+                    <option value="CIVIL">CIVIL</option>
+                    <option value="CSE">CSE</option>
+                    <option value="CSM">CSM</option>
+                    <option value="ECE">ECE</option>
+                    <option value="EEE">EEE</option>
+                    <option value="IT">IT</option>
+                    <option value="MECH" >MECH</option>
+                </select><br><br>
+                <button type="submit">Search</button>
+            </div>
+        </form>
+    </body>
+</html>
+{% endblock %}

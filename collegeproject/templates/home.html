@@ -1,0 +1,37 @@
+<!--<h4>Your Project has been successfully submitted</h4><br>
+<a href="{% url 'createproject'%}">CREATE NEW PROJECT</a>-->
+{% include 'base.html'%}
+{% load static %}
+{% block content %}
+<html>
+    <head>
+        <title>SPMS</title>
+        <link rel="shortcut icon" href="images/logo.jpeg">
+    </head>
+    <body>
+        <!--{% for i in project %}
+        <div class="container1">
+            <label>Project Title:</label><a href="{% url 'data' i.id %}">{{i.title}}</a>
+            <a href="{% url 'update' i.id %}"><button class="update">Update</button></a>
+            <a href="{% url 'delete' i.id %}"><button class="delete">Delete</button></a>
+        </div>
+        {% endfor %}-->
+        {% for message in messages %}
+            <div class="alert alert-success" role="alert">
+                {{message}}
+            </div>
+        {% endfor %}
+        
+        <div class="main">
+            <ul class="main-list">
+                <li class="list"><a class="main-anchor" href="{% url 'createproject' %}">Add Project</a></li>
+                <li class="list"><a class="main-anchor" href="{% url 'uploadexcelfile' %}">Upload Excel</a></li>
+                <li class="list"><a class="main-anchor" href="{% url 'modifypage' %}">Modify</a></li>
+                <!--<li class="list"><a class="main-anchor" href="{% url 'modifypage' %}">Delete</a></li>-->
+                <li class="list"><a class="main-anchor" href="{% url 'search' %}">Search</a></li>
+                
+            </ul>
+        </div>
+    </body>
+</html>
+{% endblock %}

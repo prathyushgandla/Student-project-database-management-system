@@ -1,0 +1,48 @@
+.register-container{
+    text-align: left;
+    padding: 20px;
+    margin-left: 150px;
+}
+input{
+    width: 280px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 8px;
+    border : 2px solid;
+}
+.register-heading{
+    margin-left: 180px;
+    font-size: 32px;
+    text-align: left;
+    padding-top: 30px;
+}
+button {
+    background-color: #4c90af;
+    color: white;
+    padding: 14px 24px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 150px;
+    border-radius: 8px;
+    border : 2px solid;
+}
+button:hover {
+    opacity: 0.8;
+}
+.regis{
+    background: url("images/searching2.jpg") no-repeat center center fixed;
+    background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+}
+.alert{
+    margin-top: 40px;
+    margin-right: 300px;
+    margin-left: 300px;
+}

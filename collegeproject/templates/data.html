@@ -1,0 +1,51 @@
+{% include 'base.html'%}
+{% load static %}
+{% block content %}
+<html>
+    <head>
+        <title>{{project.Title}}</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="{% static 'css/data.css' %}">
+      </head>
+    <body>
+        <div class="data">
+            <label>Title:</label><p>{{project.Title}}</p><br>
+            <label>Academic Year:</label><p>{{project.Academic}}</p><br>
+            <label>Project Type:</label><p>{{project.ProjectType}}</p><br>
+            <label>Department:</label><p>{{project.Department}}</p><br>
+            <label>Group Size:</label><p>{{project.GroupSize}}</p><br>
+            <label>Research:</label><p>{{project.Research}}</p><br><br>
+            <label>Software Used:</label><p>{{project.Software}}</p><br><br>
+            <label>Student Name:</label>
+            <p>{{project.StudentName1}}&nbsp&nbsp&nbsp{{project.StudentName2}}&nbsp&nbsp&nbsp{{project.StudentName3}}&nbsp&nbsp&nbsp
+                {% if project.StudentName4 != '0.0' %}{{project.StudentName4}}{% endif %}&nbsp&nbsp&nbsp
+                {% if project.StudentName5 != '0.0' %}{{project.StudentName5}}{% endif %}
+            </p><br>
+            <label>Student Id:</label>
+            <p>{{project.StudentRollno1}}&nbsp&nbsp&nbsp{{project.StudentRollno2}}&nbsp&nbsp&nbsp{{project.StudentRollno3}}&nbsp&nbsp&nbsp
+                {% if project.StudentRollno4 != '0.0' %}{{project.StudentRollno4}}{% endif %}&nbsp&nbsp&nbsp
+                {% if project.StudentRollno5 != '0.0' %}{{project.StudentRollno5}}{% endif %}
+            </p><br><br>
+            <label>Student Mobile Number:</label>
+            <p>{{project.StudentMobileNumber1}}&nbsp&nbsp&nbsp{{project.StudentMobileNumber2}}&nbsp&nbsp&nbsp{{project.StudentMobileNumber3}}
+                {% if project.StudentMobileNumber4 != 0 %}{{project.StudentMobileNumber4}}{% endif %}&nbsp&nbsp&nbsp
+                {% if project.StudentMobileNumber5 != 0 %}{{project.StudentMobileNumber5}}{% endif %}&nbsp&nbsp&nbsp
+            </p><br>
+            <label>Student Email:</label>
+            <p>{{project.StudentEmail1}}&nbsp&nbsp&nbsp{{project.StudentEmail2}}&nbsp&nbsp&nbsp{{project.StudentEmail3}}&nbsp&nbsp&nbsp
+                {% if project.StudentEmail4 != '0.0' %}{{project.StudentEmail4}}{% endif %}&nbsp&nbsp&nbsp
+                {% if project.StudentEmail5 != '0.0' %}{{project.StudentEmail5}}{% endif %}&nbsp&nbsp&nbsp
+            </p><br><br>
+            <label>GuideName:</label><p>{{project.GuideName}}</p><br><br>
+            <label>Guide Mobile Number:</label><p>{{project.GuideNumber}}</p><br><br>
+            <label>Guide Email:</label><p>{{project.GuideEmail}}</p><br><br>
+            <label>Document:</label><a class="link" href="{{project.File.url}}" download>{{project.File}}</a><br><br>
+            <a href="{% url 'update' project.id %}"><button  class="button-update">Update</button></a>
+            <a href="{% url 'deleteitem' project.id %}"><button  class="button-delete" >Delete</button></a>
+            
+            
+        </div>
+    </body>
+</html>
+{% endblock %}

@@ -1,0 +1,61 @@
+.register-container{
+    text-align:center;
+}
+.project-section,.student-section,.guide-section{
+    border: 2px solid black;
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+label{
+    font-size: 22px;
+    font-weight: 650px;
+}
+input,select{
+    border:1px solid black;
+    border-radius: 5px;
+    padding: 7px;
+}
+body{
+    background: url("images/bg1.jpg") no-repeat center center fixed;
+    background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+}
+button {
+background-color: #4c90af;
+color: white;
+padding: 14px 24px;
+margin: 8px 0;
+border: none;
+cursor: pointer;
+width: 150px;
+border-radius: 8px;
+border : 2px solid;
+}
+button:hover {
+    opacity: 0.7;
+}
+
+
+
+
+
+.form-heading{
+    text-align: center;
+    font-family: Comic Sans MS;
+    font-size: 45px;
+    color: black;
+}
+.heading{
+    text-align: center;
+    font-family: Comic Sans MS;
+    font-size: 40px;
+}
+.alert{
+    margin-right: 300px;
+    margin-left: 300px;
+}

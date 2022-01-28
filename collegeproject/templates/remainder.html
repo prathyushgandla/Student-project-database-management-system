@@ -1,0 +1,17 @@
+{% load static %}
+{% block content %}
+<html>
+    <head>
+        <title>Remainder</title>
+        <link rel="stylesheet" href="{% static 'css/delete.css' %}">
+    </head>
+    <body>
+        <div class="delete-div">
+            <h2 class="delete-header">Remainder</h2>
+            <p class="delete-body">Are you Sure, Do you want to Delete?</p>
+            <a class="delete-btn" href="{% url 'delete' project.id %}">Delete</a>
+            <a class="delete-cancel"  href="{% url 'data' project.id %}">Cancel</a>
+        </div>
+    </body>
+</html>
+{% endblock %}

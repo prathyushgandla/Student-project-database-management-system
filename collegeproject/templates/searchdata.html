@@ -1,0 +1,20 @@
+{% include 'base.html'%}
+{% load static %}
+{% block content %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/search.css' %}">
+    </head>
+    <body class="searchdata">
+        <div class="search-title">
+            {% if titles %}
+                {% for title in titles %}
+                    <a class="search-a" href="{% url 'data' title.id %}">{{title}}</a><br><br>
+                {% endfor %}
+            {% else %}
+                <h1 style="color: red;">No Records Found</h1>
+            {% endif %}
+        </div>
+    </body>
+</html>
+{% endblock %}

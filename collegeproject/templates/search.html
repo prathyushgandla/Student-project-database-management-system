@@ -1,0 +1,19 @@
+{% include 'base.html'%}
+{% load static %}
+{% block content %}
+<html>
+    <head>
+        <title>Searchpage</title>
+        <link rel="stylesheet" href="{% static 'css/search.css' %}">
+    </head>
+    <body class="searching">
+        <div>
+            <form class="d-flex" method=POST action="{% url 'search' %}">
+                {% csrf_token %}
+                <input class="search-btn" type="search" placeholder="Search Here" aria-label="Search" name="search">
+                <button class="btn btn-outline-secondary" type="submit">Search</button>
+            </form>
+        </div>
+    </body>
+</html>
+{% endblock %}

@@ -1,0 +1,29 @@
+{% include 'base.html' %}
+{% load static %}
+{% block content %}
+<html>
+    <head>
+        <title>Searchpage</title>
+        <link rel="stylesheet" href="{% static 'css/uploadexcelfile.css' %}">
+    </head>
+    <body>
+        {% for msg in messages %}
+            <div class="alert alert-danger" role="alert">
+                {{msg}}
+            </div>
+        {% endfor %}
+        <div style="text-align: center; margin-top: 120px; border: 1px solid black; margin-left: 400px; margin-right: 300px; border-radius: 15px;">
+            <h2>Import Excel Data to Database</h2>
+        <form method='post' action='' enctype='multipart/form-data'>
+            {% csrf_token %}
+                <input style="text-align: center; margin: 50px; font-size: 22px;" class="file" type='file' name='file'  accept=".csv" required>
+                <button class="btn-lg btn-outline-secondary" type="submit">Submit</button>
+        </form>
+        </div>
+        <div style="text-align: center; border: 1px solid black; margin-left: 400px; margin-right: 300px;  border-radius: 15px;">
+            <h2 style="margin-bottom: 50px;">Export DataBase Data to Excel file</h2>
+            <a style="text-decoration: none;" href="{% url 'exportcsv' %}"><button style="margin-bottom: 50px;" class="btn-lg btn-outline-secondary" type="submit">Download File</a></button>
+        </div>
+    </body>
+</html>
+{% endblock %}

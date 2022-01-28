@@ -1,0 +1,46 @@
+.heading{
+    text-align: center;
+    font-family: Comic Sans MS;
+    font-size: 45px;
+}
+.main{
+    text-align: center;
+    width: 25%;
+    margin: auto;
+    margin-top: 70px;
+    border-radius: 10px;
+}
+.main-list .list{
+    list-style-type: none;
+    padding: 16px;
+    font-size: 32px;
+    border: 1px solid black;
+    border-radius: 10px;
+
+}
+.main-anchor{
+    text-decoration: none;
+    color: black;
+    font-size: 32px;
+}
+body{
+    background: url("images/homepage.jpg") no-repeat center center fixed;
+    background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+}
+.welcome{
+    padding-left: 140px;
+    font-size: 34px;
+}
+.btn{
+    margin-right: 120px;
+}
+.main-anchor:hover{
+    color: darkslategray;
+}
+.alert{
+    margin-right: 300px;
+    margin-left: 300px;
+}

@@ -1,0 +1,21 @@
+{% include 'base.html'%}
+{% load static %}
+{% block content %}
+<html>
+    <head>
+        <title>Searched details</title>
+        <link rel="stylesheet" href="{% static 'css/updatedetails.css' %}">
+    </head>
+    <body>
+        <div class="main-data">
+            {% if value %}
+            {% for values in value %}
+                <a class="display" href="{% url 'data' values.id %}">{{values.Title}}</a><br><br>
+            {% endfor %}
+            {% else %}
+            <h1 style="color: red;">No Records Found</h1>
+            {% endif %}
+        </div>
+    </body>
+</html>
+{% endblock %}

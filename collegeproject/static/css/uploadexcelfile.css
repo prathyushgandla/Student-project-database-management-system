@@ -1,0 +1,12 @@
+body{
+        background: url("images/delete.png") no-repeat center center fixed;
+        background-size: cover;
+        -o-background-size: cover;  
+        -webkit-background-size: cover;
+        -moz-background-size:cover;
+}
+
+.alert{
+    margin-right: 300px;
+    margin-left: 300px;
+}
